@@ -1,0 +1,142 @@
+% !TEX program = ptex2pdf
+%%		TO DO (by twice):
+%%		ptex2pdf -l -u -ot "-kanji=utf8 "  -od "-p B5 " main
+\RequirePackage{plext}			%	縱組顓用
+\RequirePackage{plautopatch}	%	為 pLaTeX 打補丁
+\RequirePackage{multicol} %多欄
+\RequirePackage{type1cm} %字體
+\RequirePackage[uplatex,deluxe,jis2004]{otf} %字體包
+
+\documentclass[10pt,b5paper]{utbook}
+\setlength{\textwidth}{192 mm}
+\setlength{\textheight}{140 mm}
+\usepackage{uline--}	% 输出波浪线、下划线等
+
+% 居中标点 命名格式 \mxxx
+\def\dou{\leavevmode\kern -.35zw \raise.6zh\hbox{\mc{・}}\kern -.15zw}
+\def\dun{\leavevmode\kern -.35zw \raise.6zh\hbox{\mc{・}}\kern -.15zw}% 、
+%\def\mgou{\leavevmode\kern -.35zw \raise.6zh\hbox{\mc{。}}\kern -.15zw}
+% 非居中式标点
+%\def\dou{\leavevmode\kern -.35zw \raise.3zh\hbox{\mc{，}}\kern -.15zw} %，
+%\def\dun{\leavevmode\kern -.35zw \raise.3zh\hbox{\mc{、}}\kern -.15zw} % 、
+\def\gou{\leavevmode\kern -.35zw \raise.3zh\hbox{\mc{。}}\kern -.15zw}
+% 冒号、分号、叹号、问号替换为勾读。
+\newcommand{\mao}{\dou}
+\newcommand{\fen}{\gou}
+\newcommand{\mtan}{\gou}
+\newcommand{\wen}{\gou}
+%前引号、后引号、书名号、曲牌名号。
+\def\xqyh{\leavevmode\kern -.1zw\raise.1zh\hbox{\mc{『}}\kern-.1zw}
+\def\xhyh{\leavevmode\kern-.05zw\raise-.1zh\hbox{\mc{』}}\kern -.1zw }
+\def\qyh{\leavevmode\kern -.1zw\raise.1zh\hbox{\mc{「}}\kern-.1zw}
+\def\hyh{\leavevmode\kern-.05zw\raise-.1zh\hbox{\mc{」}}\kern -.1zw }
+\def\qsm{\leavevmode\kern -.1zw\hbox{\mc{〈}}}
+\def\hsm{\leavevmode\hbox{\mc{〉}}\kern -.1zw}
+\def\qqp{\leavevmode\kern -.1zw\hbox{\mc{〔}}}
+\def\hqp{\leavevmode\hbox{\mc{〕}}\kern -.1zw}
+
+\begin{document}
+%%% 此處必須使用自定義的字體進行初始化，否則會產生蜜汁錯誤
+\fontsize{15}{25}\selectfont
+\mcfamily \pagestyle{empty}
+
+\vspace*{8mm}
+% 前言
+{\LARGE\bfseries~題卓老批點西廂記}
+\addcontentsline{toc}{chapter}{題卓老批點西廂記}
+
+\vspace*{8mm}
+
+\par\noindent
+看書不從生動處看\dun
+不從關鍵處看\dun
+不從照應處看\dun
+猶如相人不以骨氣\dun
+不以神色\dun
+不以眉目\dun
+雖指點之工\dun
+言驗之切\dun
+下焉者矣\gou
+烏得名相\dun
+語曰傳神在阿堵間\dun
+嗚呼\mtan
+此處著眼\dun
+正不易易\dun
+吾獨怪夫世之耳\gou
+食者\dun
+不辯眞贋\dun
+但借名色\dun
+便爾稱隹\dun
+如假卓老\dun
+假文長\dun
+假眉公\dun
+種種諸刻\dun
+盛行不諱\gou
+及覩眞本\dun
+反生疑詫\dun
+掩我心靈\dun
+隨人嗔喜\dun
+舉世已盡然矣\gou
+吾亦奚辯\dun
+往陶不退語\gou
+余家藏卓老西廂\dun
+爲世所未見\gou
+因舉\xqyh
+風流隨何\dun
+浪子陸賈\xhyh
+二語\dun
+疊用照應\dun
+呼吸生動\dun
+乃評之曰\dun
+一用妙\dun
+二用妙妙\dun
+三用以致五用\dun
+皆稱妙絕趣絕\gou
+又如用頭巾語\dun
+甚趣\gou
+帶酸腐氣\dun
+可愛\gou
+往往點出\dun
+皆人所絕不著意者\gou
+一經道破\dun
+煞有關情\gou
+在彼作者\dun
+亦不知技之至此極也\gou
+卓老嘗言\dun
+凡我批點\dun
+如長康點睛\dun
+他人不能代\gou
+識此而後知卓老之書\dun
+無有不切中關鍵\dun
+開闊心胸\dun
+發我慧性者矣\gou
+夫西廂爲千古傳奇之祖\gou
+卓老所批\dun
+又爲西廂傳神之祖\gou
+世不乏具眼\dun
+應有取證在母曰劇本也\gou
+當從李氏之書讀之矣\gou
+
+\hfill{崇禎歲庚辰仲秋之朔酔香主人於快閣}\hspace*{2zw}
+
+\hfill{〔酔香主人〕識}\hspace*{2zw}\\
+
+
+\clearpage
+\fontsize{15}{25}\selectfont
+\mcfamily
+
+\begin{quotation}
+\par{}春遊浩蕩\hskip8pt是年年寒食\hskip8pt梨花時節\hskip8pt白錦無紋香爛漫\hskip8pt玉樹瓊苞堆雪\hskip8pt靜夜沉沉\hskip8pt浮光靄靄\hskip8pt冷浸溶溶月\hskip8pt人間天上\hskip8pt爛銀霞照通徹\hskip8pt渾似姑射眞人\hskip8pt天姿靈秀\hskip8pt意氣殊高潔\hskip8pt萬蕊參差誰信道\hskip8pt不與群芳同列\hskip8pt浩氣清爽\hskip8pt仙才卓犖\hskip8pt下土難分别\hskip8pt瑤天歸去\hskip8pt洞天方看清絶
+\end{quotation}
+
+看官\dou{}作這一首\hskip1mm\owave{無俗念}\hskip1mm詞的\dou{}乃是\kasen{南宋}末年一位武學名家\dou{}有道之士\gou{}此人姓\kasen{丘}\dou{}名\kasen{處機}\dou{}道號\kasen{長}\\
+\kasen{春子}\dou{}名列\kasen{全眞七子}之一\dou{}是\kasen{全眞教}中出類拔萃的人物\gou\hskip1mm\owave{詞品}\hskip1mm評論此詞道\mao\qyh{}\kasen{長春}\dou{}世之所謂仙人也\dou{}而詞之清拔如此\gou\hyh{}這首詞誦的似是梨花\dou{}其實詞中眞意却是讚譽一位身穿白衣的美貌少女\dou{}説她\qyh{}渾似\kasen{姑射眞人}\dou{}天姿靈秀\dou{}意氣殊高潔\hyh\dou{}又説她\qyh{}浩氣清英\dou{}仙才卓犖\hyh\qyh{}不與群芳同列\hyh\gou{}詞中所誦這美女是誰\wen{}乃是\kasen{古墓派}傳人\kasen{小龍女}\gou{}她一生愛穿白衣\dou{}當眞如玉樹臨風\dou{}瓊苞堆雪\dou{}兼之生性清冷\dou{}實是當得起\qyh{}冷浸溶溶月\hyh{}的形容\dou{}以\qyh{}無俗念\hyh{}三字贈之\dou{}可説最妙不過\gou{}\kasen{長春子}\hskip1mm\kasen{丘處機}和她在\kasen{終南山}上比鄰而居\dou{}當年一見\dou{}便冩下這首詞來\gou
+
+這時\kasen{丘處機}逝世已久\dou{}而\kasen{小龍女}也已嫁與\kasen{神鵰大俠}\hskip1mm\kasen{楊過}爲妻\gou{}可是在\kasen{河南}\hskip1mm\kasen{少室山}的山道之上\dou{}却另有一位少女\dou{}正在低低念誦此詞\gou{}這少女約有十八九歳年紀\dou{}身穿淡黃衣衫\dou{}騎著一頭瘦瘦的青驢\dou{}正沿著山道緩緩而上\gou{}她心中默想\mao\qyh{}也只有龍姊姊這樣的人物\dou{}纔配得上他\gou\hyh{}這一個\qyh{}他\hyh{}字\dou{}指的自然是\kasen{神鵰大俠}\hskip1mm\kasen{楊過}了\gou{}她也不拉韁\dou{}任著那青驢信步而行\dou{}一路上山\gou{}過了良久\dou\\
+她又低聲吟道\mao\qyh{}歡樂趣\dou{}離别苦\dou{}就中更有痴児女\gou{}君應有語\dou{}渺萬里層雲\dou{}千山暮雪\dou{}隻影向誰去\wen\hyh
+
+
+
+\end{document}
+
